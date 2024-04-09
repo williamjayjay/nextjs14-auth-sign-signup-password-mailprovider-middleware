@@ -13,8 +13,8 @@ import { z } from "zod";
 import validator from "validator";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-// import { passwordStrength } from "check-password-strength";
-// import PasswordStrength from "./PasswordStrength";
+import { passwordStrength } from "check-password-strength";
+import { PasswordStrengthComponent } from "./PasswordStrength";
 // import { registerUser } from "@/lib/actions/authActions";
 // import { toast } from "react-toastify";
 
@@ -69,9 +69,9 @@ const SignUpForm = () => {
     const [passStrength, setPassStrength] = useState(0);
     const [isVisiblePass, setIsVisiblePass] = useState(false);
 
-    //   useEffect(() => {
-    //     setPassStrength(passwordStrength(watch().password).id);
-    //   }, [watch().password]);
+    useEffect(() => {
+        setPassStrength(passwordStrength(watch().password).id);
+    }, [watch().password]);
     const toggleVisblePass = () => setIsVisiblePass((prev) => !prev);
 
     const saveUser: SubmitHandler<InputType> = async (data) => {
@@ -142,7 +142,7 @@ const SignUpForm = () => {
                     )
                 }
             />
-            {/* <PasswordStrength passStrength={passStrength} /> */}
+            <PasswordStrengthComponent passStrength={passStrength} />
             <Input
                 errorMessage={errors.confirmPassword?.message}
                 isInvalid={!!errors.confirmPassword}
