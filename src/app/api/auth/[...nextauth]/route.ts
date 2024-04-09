@@ -9,9 +9,9 @@ import { use } from "react";
 import { User } from "@prisma/client";
 
 export const authOptions: AuthOptions = {
-  // pages: {
-  //   signIn: "/auth/signin",
-  // },
+  pages: {
+    signIn: "/auth/signin",
+  },
   // session: {
   //   strategy: "jwt",
   // },

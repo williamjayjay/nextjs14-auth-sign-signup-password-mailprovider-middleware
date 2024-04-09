@@ -24,7 +24,7 @@ export const SigninButton = () => {
                 </>
             ) : (
                 <>
-                    <Button as={Link} href={"/api/auth/signin"}  >Sign In</Button>
+                    <Button onClick={() => signIn()}  >Sign In</Button>
 
 
                     <Button as={Link} href={"/auth/signup"}>
