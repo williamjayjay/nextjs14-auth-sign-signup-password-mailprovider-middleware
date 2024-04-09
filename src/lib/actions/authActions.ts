@@ -10,6 +10,7 @@ import * as bcrypt from "bcrypt";
 // } from "../mail";
 // import { signJwt, verifyJwt } from "../jwt";
 import { prisma } from "../prisma";
+import { compileActivationTemplate, sendMail } from "../mail";
 
 export async function registerUser(
   user: Omit<User, "id" | "emailVerified" | "image">
@@ -21,12 +22,15 @@ export async function registerUser(
     },
   });
 
-//   const jwtUserId = signJwt({
-//     id: result.id,
-//   });
-//   const activationUrl = `${process.env.NEXTAUTH_URL}/auth/activation/${jwtUserId}`;
-//   const body = compileActivationTemplate(user.firstName, activationUrl);
-//   await sendMail({ to: user.email, subject: "Activate Your Account", body });
-//   return result;
+  //   const jwtUserId = signJwt({
+  //     id: result.id,
+  //   });
+
+
+  // const activationUrl = `${process.env.NEXTAUTH_URL}/auth/activation/${jwtUserId}`;
+  const activationUrl = `${process.env.NEXTAUTH_URL}/auth/activation/${result.id}`;
+  const body = compileActivationTemplate(user.firstName, activationUrl);
+  await sendMail({ to: user.email, subject: "Activate Your Account", body });
+  return result;
 }
 
