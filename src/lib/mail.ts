@@ -23,13 +23,24 @@ export async function sendMail({
     //     },
     // });
 
-    const transport = nodemailer.createTransport({
-        service: "gmail",
+    var transport = nodemailer.createTransport({
+        host: "sandbox.smtp.mailtrap.io",
+        port: 2525,
         auth: {
-            user: SMPT_EMAIL,
-            pass: SMTP_GMAIL_PASS,
-        },
+            user: SMTP_USER,
+            pass: SMTP_PASS
+        }
     });
+
+    // --------------------------------
+
+    // const transport = nodemailer.createTransport({
+    //     service: "gmail",
+    //     auth: {
+    //         user: SMPT_EMAIL,
+    //         pass: SMTP_GMAIL_PASS,
+    //     },
+    // });
 
     try {
         const testResult = await transport.verify();
