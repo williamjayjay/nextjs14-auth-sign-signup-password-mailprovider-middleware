@@ -55,8 +55,8 @@ export const authOptions: AuthOptions = {
 
         // This is Naive Way of Comparing The Passwords
         // const isPassowrdCorrect = credentials?.password === user.password;
-        if (!credentials?.password) 
-        throw new Error("Please Provide Your Password");
+        if (!credentials?.password)
+          throw new Error("Please Provide Your Password");
 
         const isPassowrdCorrect = await bcrypt.compare(credentials.password, user.password);
 
@@ -70,17 +70,17 @@ export const authOptions: AuthOptions = {
     }),
   ],
 
-  // callbacks: {
-  //   async jwt({ token, user }) {
-  //     if (user) token.user = user as User;
-  //     return token;
-  //   },
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) token.user = user as User;
+      return token;
+    },
 
-  //   async session({ token, session }) {
-  //     session.user = token.user;
-  //     return session;
-  //   },
-  // },
+    async session({ token, session }) {
+      session.user = token.user;
+      return session;
+    },
+  },
 };
 
 const handler = NextAuth(authOptions);
