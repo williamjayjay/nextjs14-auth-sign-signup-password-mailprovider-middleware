@@ -77,7 +77,7 @@ Para garantir o funcionamento adequado da nossa aplicação, verifique abaixo:
 
 6. **Gere ou crie os tokens NEXTAUTH_SECRET e JWT_USER_ID_SECRET** 
 
-7. **Rodar a aplicação com PNPM ou YARN:**
+7. **Rodar a aplicação:**
   ```sh
   bun dev
   ```
