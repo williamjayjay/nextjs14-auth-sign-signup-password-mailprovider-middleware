@@ -19,7 +19,7 @@
 <p align="center">Vamos construir juntos um fluxo de login,cadastro, reset de senha e ativação de email utilizando NextJS tanto no front quanto no back.<br/><strong>Está é apenas uma POC de um fluxo completo de autenticação usando nextjs</strong>.</p>
 
 <p align="center">
-<img alt="Auth NextJS" src="github/cover.jpeg" />
+<img alt="Auth NextJS" src="github/cover.png" />
 </p>
 
 ## 🥶 Sobre o projeto
