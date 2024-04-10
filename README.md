@@ -108,5 +108,6 @@ UI e UX feita de forma simplista, foco da aplicação consiste em si na regra e 
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="screenshot" src="github/signin.png>  SignIn Page |  <img width="1604" alt="screenshot"  src="github/signup.png>  SignUp Page |<img width="1604" alt="screenshot" src="github/forgotPassword.png>  Forgot Password|
-|<img width="1604" alt="screenshot" src="github/resetPasswordForm.png>  Reset Password  |  <img width="1604" alt="screenshot" src="github/profile.png>  Profile Page |<img width="1604" alt="screenshot" src="github/emailActiveMailTrap.png>  Activate MailTrap| <img width="1604" alt="screenshot" src="github/resetPasswordMailTrap.png> Reset Pass MailTrap| <img width="1604" alt="screenshot" src="github/emailActiveMailTrap.png>  Activate Email| 
+|<img width="1604" alt="screenshot" src="github/signin.png">  SignIn Page |  <img width="1604" alt="screenshot"  src="github/signup.png">  SignUp Page |<img width="1604" alt="screenshot" src="github/forgotPassword.png">  Forgot Password|
+|<img width="1604" alt="screenshot" src="github/resetPasswordForm.png">  Reset Password  |  <img width="1604" alt="screenshot" src="github/profile.png">  Profile Page |<img width="1604" alt="screenshot" src="github/emailActiveMailTrap.png">  Activate MailTrap| <img width="1604" alt="screenshot" src="github/resetPasswordMailTrap.png"> Reset Pass MailTrap| <img width="1604" alt="screenshot" src="github/emailActiveMailTrap.png">  Activate Email| 
+
