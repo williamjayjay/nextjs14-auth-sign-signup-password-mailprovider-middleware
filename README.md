@@ -106,8 +106,18 @@ Para garantir o funcionamento adequado da nossa aplicação, verifique abaixo:
 UI e UX feita de forma simplista, foco da aplicação consiste em si na regra e no fluxo da api em NEXTJS.
 
 
-| | | |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="screenshot" src="github/signin.png">  SignIn Page |  <img width="1604" alt="screenshot"  src="github/signup.png">  SignUp Page |<img width="1604" alt="screenshot" src="github/forgotPassword.png">  Forgot Password|
-|<img width="1604" alt="screenshot" src="github/resetPasswordForm.png">  Reset Password  |  <img width="1604" alt="screenshot" src="github/profile.png">  Profile Page |<img width="1604" alt="screenshot" src="github/emailActiveMailTrap.png">  Activate MailTrap| <img width="1604" alt="screenshot" src="github/resetPasswordMailTrap.png"> Reset Pass MailTrap| <img width="1604" alt="screenshot" src="github/emailActiveMailTrap.png">  Activate Email| 
+| Página de Entrada (SignIn) | Página de Cadastro (SignUp) |
+|:-------------------------:|:-------------------------:|
+| ![SignIn Page](github/signin.png) | ![SignUp Page](github/signup.png) |
 
+| Página de Recuperação de Senha (Forgot Password) | Página de Redefinição de Senha (Reset Password) |
+|:-------------------------:|:-------------------------:|
+| ![Forgot Password](github/forgotPassword.png) | ![Reset Password](github/resetPasswordForm.png) |
+
+| Página de Perfil (Profile) | Email de Ativação |
+|:-------------------------:|:-------------------------:|
+| ![Profile Page](github/profile.png) | ![Activate Email](github/emailActiveMail.png) |
+
+| Email de Redefinição de Senha - MailTrap | Email de Ativação - MailTrap |
+|:-------------------------:|:-------------------------:|
+| ![Reset Pass MailTrap](github/resetPasswordMailTrap.png) | ![Activate Email - MailTrap](github/emailActiveMailTrap.png) |
