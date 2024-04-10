@@ -10,7 +10,6 @@ import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { z } from "zod";
-// import NextAuthProviders from "./NextAuthProviders";
 
 interface Props {
     callbackUrl?: string;
@@ -80,7 +79,6 @@ const SignInForm = (props: Props) => {
                     </Button>
                 </div>
             </div>
-            {/* <NextAuthProviders /> */}
         </form>
     );
 };

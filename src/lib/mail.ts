@@ -1,10 +1,7 @@
-// import Handlebars from "handlebars";
 import Handlebars from "handlebars";
 import nodemailer from "nodemailer";
 import { activationTemplate } from "./emailTemplates/activation";
 import { resetPasswordTemplate } from "./emailTemplates/resetPass";
-// import { activationTemplate } from "./emailTemplates/activation";
-// import { resetPasswordTemplate } from "./emailTemplates/resetPass";
 
 export async function sendMail({
     to,
@@ -16,15 +13,6 @@ export async function sendMail({
     body: string;
 }) {
     const { SMPT_EMAIL, SMTP_GMAIL_PASS, SMTP_USER, SMTP_PASS } = process.env;
-    //
-    // var transport = nodemailer.createTransport({
-    //     host: "sandbox.smtp.mailtrap.io",
-    //     port: 2525,
-    //     auth: {
-    //         user: SMTP_USER,
-    //         pass: SMTP_PASS,
-    //     },
-    // });
 
     var transport = nodemailer.createTransport({
         host: "sandbox.smtp.mailtrap.io",

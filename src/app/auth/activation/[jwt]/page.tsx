@@ -1,5 +1,4 @@
 import { activateUser } from "@/lib/actions/authActions";
-import { verifyJwt } from "@/lib/jwt";
 
 interface Props {
     params: {

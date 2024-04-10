@@ -3,11 +3,7 @@
 import { User } from "@prisma/client";
 
 import * as bcrypt from "bcrypt";
-// import {
-//   compileActivationTemplate,
-//   compileResetPassTemplate,
-//   sendMail,
-// } from "../mail";
+
 import { signJwt, verifyJwt } from "../jwt";
 import { prisma } from "../prisma";
 import { compileActivationTemplate, compileResetPassTemplate, sendMail } from "../mail";
@@ -33,14 +29,9 @@ export async function registerUser(
   return result;
 }
 
-
-
 type ActivateUserFunc = (
   jwtUserId: string
 ) => Promise<"userNotExist" | "alreadyActivated" | "success">;
-
-
-
 
 export const activateUser: ActivateUserFunc = async (jwtUserID) => {
   const payload = verifyJwt(jwtUserID);
@@ -63,8 +54,6 @@ export const activateUser: ActivateUserFunc = async (jwtUserID) => {
   return "success";
 };
 
-
-
 export async function forgotPassword(email: string) {
   const user = await prisma.user.findUnique({
     where: {
@@ -74,7 +63,6 @@ export async function forgotPassword(email: string) {
 
   if (!user) throw new Error("The User Does Not Exist!");
 
-  //  Send Email with Password Reset Link
   const jwtUserId = signJwt({
     id: user.id,
   });
@@ -93,8 +81,6 @@ type ResetPasswordFucn = (
   jwtUserId: string,
   password: string
 ) => Promise<"userNotExist" | "success">;
-
-
 
 export const resetPassword: ResetPasswordFucn = async (jwtUserId, password) => {
   const payload = verifyJwt(jwtUserId);

@@ -1,11 +1,9 @@
 import prisma from "@/lib/prisma";
 import { AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import GoogleProvider from "next-auth/providers/google";
 import * as bcrypt from "bcrypt";
 import NextAuth from "next-auth/next";
 
-import { use } from "react";
 import { User } from "@prisma/client";
 
 export const authOptions: AuthOptions = {
@@ -53,8 +51,6 @@ export const authOptions: AuthOptions = {
 
         if (!user) throw new Error("User name or password is not correct");
 
-        // This is Naive Way of Comparing The Passwords
-        // const isPassowrdCorrect = credentials?.password === user.password;
         if (!credentials?.password)
           throw new Error("Please Provide Your Password");
 
